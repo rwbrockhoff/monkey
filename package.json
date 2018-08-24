@@ -1,0 +1,40 @@
+{
+  "name": "monkey",
+  "version": "0.1.0",
+  "private": true,
+  "main": "public/Main.js",
+  "homepage": "./",
+  "dependencies": {
+    "create-electron-react-app": "^1.2.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-electron-web-view": "^2.0.1",
+    "react-scripts": "1.1.5"
+  },
+  
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron-start": "electron .",
+    "preelectron-pack": "yarn build",
+    "electron-pack": "build -c.extraMetadata.main=build/Main.js"
+    
+  },
+  "devDependencies": {
+    "electron": "^2.0.8",
+    "electron-builder": "^20.28.2"
+  },
+  "build": {
+    "appId": "com.monk",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories":{
+      "buildResources": "assets"
+    }
+    
+  }
+}
